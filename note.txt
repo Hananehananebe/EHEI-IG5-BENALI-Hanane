@@ -1,0 +1,24 @@
+note
+pour ouvrir le vc code a partir du dossier 
+on entre dans le lien de dossier puis on ecris cmd 
+une invite de commande s'afiche dansle ficher ouvert on ecrit cd le chemin
+puis entrer 
+puis on ecrit code .
+
+
+
+
+node_module genere les bibliotheque front-end
+similaire a node_module c'est le vendor dans le back-end . danc le vendor genere les bibliotheque 
+
+
+log= la jornalisation  
+c'est quoi orm docktrine 
+
+comprendre symfony flex 
+
+
+pour faire routing il ya 3 facom 
+soit par le controller 
+route.yaml
+php native
