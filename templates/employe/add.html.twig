@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajouter un employé{% endblock %}
+
+{% block body %}
+{# Style CSS pour avoir le fond bleu clair comme sur votre image #}
+<style>
+    body {
+        background-color: #89CFF0; /* Couleur bleu ciel */
+    }
+    .form-container {
+        margin: 20px;
+        padding: 20px;
+    }
+    /* Un peu de style pour les labels et inputs */
+    label { display: block; margin-top: 10px; font-weight: bold; }
+    input, select { margin-bottom: 10px; }
+</style>
+
+{# 1. Inclusion de la Navbar #}
+{{ include('partials/_navbar.html.twig') }}
+
+<div class="form-container">
+    <h1>Ajouter un nouvel employé</h1>
+
+    {# 2. Affichage du formulaire #}
+    {# form_start commence la balise <form> #}
+    {{ form_start(employeForm) }}
+        
+        {# form_widget affiche tous les champs définis dans EmployeType #}
+        {{ form_widget(employeForm) }}
+
+        <button type="submit" class="btn">Enregistrer</button>
+
+    {# form_end ferme la balise </form> #}
+    {{ form_end(employeForm) }}
+</div>
+{% endblock %}

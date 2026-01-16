@@ -2,26 +2,30 @@
 
 namespace App\Form;
 
-use App\Entity\Product;
+use App\Entity\Employe;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
-class ProductType extends AbstractType
+class EmployeType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('label')
-            ->add('price')
-            ->add('quantity')
+            ->add('nom')
+            ->add('prenom')
+            ->add('adressEmail')
+            ->add('telephone')
+            ->add('envoyer', SubmitType::class, [
+                'label' => "Enregistrer l'employé"])
         ;
     }
 
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-            'data_class' => Product::class,
+            'data_class' => Employe::class,
         ]);
     }
 }

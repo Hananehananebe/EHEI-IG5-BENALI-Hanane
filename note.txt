@@ -13,7 +13,7 @@ similaire a node_module c'est le vendor dans le back-end . danc le vendor genere
 
 
 log= la jornalisation  
-c'est quoi orm docktrine 
+c'est quoi orm docktrine : permet de creer la base de données automatiquement 
 
 comprendre symfony flex 
 
@@ -22,3 +22,8 @@ pour faire routing il ya 3 facom
 soit par le controller 
 route.yaml
 php native
+
+
+docker-compose up -d --build
+docker-compose start
+php bin/console make:migration
